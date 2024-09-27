@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
+}
+
+body {
+  background-color: #ffe6e6;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #ff66b3;
+  text-shadow: 2px 2px #ffcccb;
+  margin-bottom: 1rem;
+  animation: bounce 2s infinite;
+}
+
+.container {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  height: 60vmin;
+  width: 60vmin;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5vmin;
+}
+
+.box {
+  height: 18vmin;
+  width: 18vmin;
+  border-radius: 1rem;
+  border: none;
+  background-color: #fff5f7;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  font-size: 7vmin;
+  color: #ff6699;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.box:hover {
+  transform: scale(1.05);
+  background-color: #ffcccb;
+}
+
+.box:active {
+  background-color: #ff66b3;
+  color: white;
+  transform: scale(1);
+}
+
+.reset {
+  margin-top: 2rem;
+}
+
+#reset-btn,
+#new-btn {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  background-color: #ff66b3;
+  color: white;
+  border-radius: 2rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0.5rem rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#reset-btn:hover,
+#new-btn:hover {
+  background-color: #ff99c2;
+  transform: scale(1.1);
+}
+
+#reset-btn:active,
+#new-btn:active {
+  background-color: #ff4d94;
+}
+
+#msg {
+  color: #ffffff;
+  font-size: 4rem;
+  text-shadow: 2px 2px #ff4d94;
+  text-align: center;
+}
+
+.msg-container {
+  height: 100vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: rgba(255, 102, 179, 0.95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
+.hide {
+  display: none;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
